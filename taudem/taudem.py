@@ -1,7 +1,6 @@
-from typing import Tuple, List, Dict, Union
+from typing import List
 
 import os
-import sys
 import shutil
 import subprocess
 import inspect
@@ -12,27 +11,18 @@ from os.path import split as _split
 from os.path import exists as _exists
 import math
 
-import operator
-
-from collections import Counter
-
-from osgeo import gdal, ogr, osr
+from osgeo import gdal, osr
 import utm
 
 import numpy as np
 from scipy.ndimage import label
 
-from pprint import pprint
-
-import cv2
-
-from wepppy.all_your_base import (
+from taudem.all_your_base import (
     read_tif,
     utm_srid,
     isfloat,
     GeoTransformer,
     wgs84_proj4,
-    IS_WINDOWS,
     NCPU
 )
 
